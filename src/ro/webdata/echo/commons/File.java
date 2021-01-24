@@ -10,6 +10,7 @@ public final class File {
     public static final String EXTENSION_SEPARATOR = ".";
 
     public static final String FILE_SEPARATOR = System.getProperty("file.separator");
+    public static final String USER_HOME = System.getProperty("user.home");
     public static final String WORKSPACE_DIR = System.getProperty("user.dir");
 
     public static final String PATH_FILES_DIR = WORKSPACE_DIR + FILE_SEPARATOR + "files";
