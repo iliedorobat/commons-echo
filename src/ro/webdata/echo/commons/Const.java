@@ -15,4 +15,10 @@ public final class Const {
     public static final String OPERATION_END = "----- END -----";
     public static final String OPERATION_MAPPING = "----- MAPPING -----";
     public static final String OPERATION_START = "----- START -----";
+
+    public static final String CIMEC_BASE_URI = "http://ghidulmuzeelor.cimec.ro/";
+    private static final String MUSEUM_PATH_EN = "Filtru-Judete-EN" + File.EXTENSION_SEPARATOR + File.EXTENSION_ASP;
+    private static final String MUSEUM_PATH_RO = "Filtru-Judete" + File.EXTENSION_SEPARATOR + File.EXTENSION_ASP;
+    public static final String MUSEUM_URI_EN = CIMEC_BASE_URI + MUSEUM_PATH_EN;
+    public static final String MUSEUM_URI_RO = CIMEC_BASE_URI + MUSEUM_PATH_RO;
 }

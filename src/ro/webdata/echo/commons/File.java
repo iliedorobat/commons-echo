@@ -4,7 +4,9 @@ import java.io.*;
 import java.util.ArrayList;
 
 public final class File {
+    public static final String EXTENSION_ASP = "asp";
     public static final String EXTENSION_CSV = "csv";
+    public static final String EXTENSION_JSON = "json";
     public static final String EXTENSION_RDF = "rdf";
     public static final String EXTENSION_TXT = "txt";
     public static final String EXTENSION_XML = "xml";
