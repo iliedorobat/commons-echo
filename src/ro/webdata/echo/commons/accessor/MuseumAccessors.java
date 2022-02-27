@@ -14,6 +14,7 @@ public class MuseumAccessors {
     public static final String AGENT = "agent";
     public static final String BUILDING = "building";
     public static final String CATEGORY = "category";
+    public static final String CIMEC_URI = "cimecUri";
     public static final String CLASSIFIED = "classified";
     public static final String CODE = "code";
     public static final String COLLECTION = "collection";
@@ -64,6 +65,7 @@ public class MuseumAccessors {
                     AGENT,
                     BUILDING,
                     CATEGORY,
+                    CIMEC_URI,
                     CLASSIFIED,
                     CODE,
                     COLLECTION,
@@ -119,8 +121,9 @@ public class MuseumAccessors {
     );
 
     public static final String MUSEUM_ACCREDITATION = ACCREDITATION;
-    public static final String MUSEUM_FOUNDED = FOUNDED;
     public static final String MUSEUM_CODE = CODE;
+    public static final String MUSEUM_CIMEC_URI = CIMEC_URI;
+    public static final String MUSEUM_FOUNDED = FOUNDED;
     public static final String MUSEUM_NAME = NAME;
     public static final String MUSEUM_SUPERVISED_BY = SUBORDINATION + SEPARATOR + SUPERVISED_BY;
     public static final String MUSEUM_SUPERVISOR_FOR = SUBORDINATION + SEPARATOR + SUPERVISOR_FOR;

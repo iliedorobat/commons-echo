@@ -1,6 +1,8 @@
 package ro.webdata.echo.commons.accessor;
 
 public class CimecAccessors {
+    /** Local accessor */
+    public static final String CIMEC_URI = "CIMEC URI";
     public static final String DIRECTOR = "Director";
     public static final String FAX = "Fax";
 
