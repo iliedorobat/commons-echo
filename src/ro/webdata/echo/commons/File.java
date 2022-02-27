@@ -51,6 +51,18 @@ public final class File {
 
     /**
      * Write data to disk
+     * @param str The input string
+     * @param filePath The full path where the file will be written
+     * @param append Specify if the text should be appended to the existing one
+     */
+    public static void write(String str, String filePath, boolean append) {
+        StringWriter sw = new StringWriter();
+        sw.write(str);
+        write(sw, filePath, append);
+    }
+
+    /**
+     * Write data to disk
      * @param list The list of strings to be written to disk
      * @param filePath The full path where the file will be written
      * @param append Specify if the text should be appended to the existing one
