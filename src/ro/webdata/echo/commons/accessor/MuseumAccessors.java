@@ -98,6 +98,8 @@ public class MuseumAccessors {
                     PUBLICATIONS,
                     SOCIAL_MEDIA,
                     SUBORDINATION,
+                    SUPERVISED_BY,
+                    SUPERVISOR_FOR,
                     SUMMARY,
                     TARGET,
                     TIMETABLE,
