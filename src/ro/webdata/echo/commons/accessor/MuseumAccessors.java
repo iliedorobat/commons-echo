@@ -107,12 +107,6 @@ public class MuseumAccessors {
             )
     );
 
-    public static final ArrayList<String> ARRAY_VALUE_ACCESSORS = new ArrayList<>(
-            Arrays.asList(
-                    PICTURES
-            )
-    );
-
     public static final ArrayList<String> DOUBLE_VALUE_ACCESSORS = new ArrayList<>(
             Arrays.asList(
                     LATITUDE,
