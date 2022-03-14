@@ -58,8 +58,9 @@ public final class Namespace {
     public static final String NS_REPO_RESOURCE_TIMESPAN_UNKNOWN_MILLENNIUM = NS_REPO_RESOURCE_TIMESPAN_UNKNOWN
             + URL_SEPARATOR + Const.MILLENNIUM_PLACEHOLDER;
 
-    public static final String NS_DBPEDIA_RESOURCE = "http://dbpedia.org/page/";
-    public static final String NS_DBPEDIA_PROPERTY = "http://dbpedia.org/property/";
+    public static final String NS_DBPEDIA_ONTOLOGY = "https://dbpedia.org/ontology/";
+    public static final String NS_DBPEDIA_RESOURCE = "https://dbpedia.org/page/";
+    public static final String NS_DBPEDIA_PROPERTY = "https://dbpedia.org/property/";
 
     private Namespace() {}
 }
