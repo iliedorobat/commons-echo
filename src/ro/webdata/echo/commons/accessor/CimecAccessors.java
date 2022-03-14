@@ -11,7 +11,6 @@ public class CimecAccessors {
     public static final String EN_ADDRESS = "Address";
     public static final String EN_ADMINISTRATIVE_SUBORDINATION = "Administrative subordination";
     public static final String EN_BUILDING_LMI_CODE = "Historic Monument Building";
-    public static final String EN_CLASSIFIED = "Classified";
     public static final String EN_COMMUNE = "Commune";
     public static final String EN_CONTACT_PERSON = "Contact person";
     public static final String EN_COUNTY = "County";
@@ -46,7 +45,6 @@ public class CimecAccessors {
     public static final String RO_ADDRESS = "Adresa";
     public static final String RO_ADMINISTRATIVE_SUBORDINATION = "Subordonare administrativă";
     public static final String RO_BUILDING_LMI_CODE = "Clădire monument istoric";
-    public static final String RO_CLASSIFIED = "Clasate";
     public static final String RO_COMMUNE = "Comuna";
     public static final String RO_CONTACT_PERSON = "Persoana contact";
     public static final String RO_COUNTY = "Județ";

@@ -128,7 +128,6 @@ public class MuseumAccessors {
     public static final String BUILDING_DESCRIPTION = BUILDING + SEPARATOR + DESCRIPTION; // data.gov.ro
     public static final String BUILDING_LMI_CODE = BUILDING + SEPARATOR + LMI_CODE;
 
-    public static final String COLLECTION_CLASSIFIED = COLLECTION + SEPARATOR + CLASSIFIED;
     public static final String COLLECTION_GENERAL_PROFILE = COLLECTION + SEPARATOR + PROFILE + SEPARATOR + GENERAL;
     public static final String COLLECTION_IMPORTANCE = COLLECTION + SEPARATOR + IMPORTANCE;
     public static final String COLLECTION_MAIN_PROFILE = COLLECTION + SEPARATOR + PROFILE + SEPARATOR + MAIN;

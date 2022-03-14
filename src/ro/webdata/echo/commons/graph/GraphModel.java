@@ -25,7 +25,8 @@ public final class GraphModel {
                 .setNsPrefix("dcterms", DCTerms.getURI())
                 .setNsPrefix("edm", EDM.getURI())
                 .setNsPrefix("foaf", FOAF.getURI())
-                .setNsPrefix("openData", Namespace.NS_REPO_PROPERTY)
+                .setNsPrefix("odp", Namespace.NS_REPO_PROPERTY)
+                .setNsPrefix("odr", Namespace.NS_REPO_RESOURCE)
                 .setNsPrefix("ore", ORE.getURI())
                 .setNsPrefix("skos", SKOS.getURI());
     }
