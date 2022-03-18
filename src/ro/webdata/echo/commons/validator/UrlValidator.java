@@ -1,13 +1,17 @@
 package ro.webdata.echo.commons.validator;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 
 public class UrlValidator {
     public static boolean isValid(String url, List<String> exceptedUrls) {
+        // Strip accents because apache validator invalidates a URL which contains accents
+        String preparedUrl = StringUtils.stripAccents(url);
         org.apache.commons.validator.routines.UrlValidator validator = new org.apache.commons.validator.routines.UrlValidator();
 
-        if (url.toLowerCase().startsWith("www")) {
-            return validator.isValid("https://" + url) || validator.isValid("http://" + url);
+        if (preparedUrl.toLowerCase().startsWith("www")) {
+            return validator.isValid("https://" + preparedUrl) || validator.isValid("http://" + preparedUrl);
         }
 
         // Skip checking the list of URLs
@@ -17,6 +21,6 @@ public class UrlValidator {
             return true;
         }
 
-        return validator.isValid(url);
+        return validator.isValid(preparedUrl);
     }
 }
