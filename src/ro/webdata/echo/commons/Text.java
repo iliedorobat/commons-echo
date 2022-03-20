@@ -46,6 +46,10 @@ public final class Text {
      * @return The formatted value
      */
     public static String sanitizeString(String value) {
+        if (value == null) {
+            return null;
+        }
+
         String regex = "(?U)[^\\p{Alnum}]+";
         String replacement = Const.UNDERSCORE_PLACEHOLDER;
         return value.replaceAll(regex, replacement);
@@ -66,5 +70,18 @@ public final class Text {
             e.printStackTrace();
             return uri;
         }
+    }
+
+    /**
+     * Encode the space character
+     * @param uri The URI
+     * @return The encoded URI
+     */
+    public static String encodeSpace(String uri) {
+        if (uri == null) {
+            return null;
+        }
+
+        return uri.replaceAll(" ", "%20");
     }
 }
