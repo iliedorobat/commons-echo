@@ -52,6 +52,7 @@ public class MuseumAccessors {
     public static final String SUMMARY = "summary";
     public static final String TARGET = "target";
     public static final String TIMETABLE = "timetable";
+    public static final String TYPE = "type";
     public static final String VIRTUAL_TOUR = "virtualTour";
     public static final String WEB = "web";
     public static final String ZIP_CODE = "zipCode";
@@ -103,6 +104,7 @@ public class MuseumAccessors {
                     SUMMARY,
                     TARGET,
                     TIMETABLE,
+                    TYPE,
                     VIRTUAL_TOUR,
                     WEB,
                     ZIP_CODE
