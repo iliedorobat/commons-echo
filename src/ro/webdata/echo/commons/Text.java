@@ -5,6 +5,9 @@ import org.apache.commons.text.CaseUtils;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public final class Text {
     public static final String REGEX_TEXT_SEPARATORS = "[;,]";
@@ -43,6 +46,22 @@ public final class Text {
 
     public static String toCamelCase(String value, boolean capitalizeFirstLetter, char[] delimiters) {
         return CaseUtils.toCamelCase(value, capitalizeFirstLetter, delimiters);
+    }
+
+    /**
+     * Split the text and get a list of atomic values.
+     * @param text The original input
+     * @param regexSeparator Text separator
+     * @return List of atomic values
+     */
+    public static List<String> toList(String text, String regexSeparator) {
+        String separator = regexSeparator != null
+                ? regexSeparator
+                : REGEX_TEXT_SEPARATORS;
+
+        return Arrays.stream(text.split(separator))
+                .map(String::trim)
+                .collect(Collectors.toList());
     }
 
     /**
