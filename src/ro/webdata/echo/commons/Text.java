@@ -7,6 +7,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 public final class Text {
+    public static final String REGEX_TEXT_SEPARATORS = "[;,]";
     private static final boolean CAPITALIZE_FIRST_LETTER = false;
 
     private Text() {}
@@ -38,6 +39,10 @@ public final class Text {
      */
     public static String toCamelCase(String value) {
         return CaseUtils.toCamelCase(value, CAPITALIZE_FIRST_LETTER, Const.CHAR_DELIMITER);
+    }
+
+    public static String toCamelCase(String value, boolean capitalizeFirstLetter, char[] delimiters) {
+        return CaseUtils.toCamelCase(value, capitalizeFirstLetter, delimiters);
     }
 
     /**
