@@ -36,14 +36,14 @@ public final class Namespace {
     public static final String NS_REPO_PROPERTY = NS_REPO + "property" + File.FILE_SEPARATOR;
     public static final String NS_REPO_RESOURCE = NS_REPO + "resource" + File.FILE_SEPARATOR;
 
-    public static final String LINK_ID_AGENT = "agent" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_AGGREGATION = "aggregation" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_CHO = "cho" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_EVENT = "event" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_LICENSE = "license" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_ORGANIZATION = "organization" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_PLACE = "place" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_TIMESPAN = "timespan" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_AGENT = "Agent" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_AGGREGATION = "Aggregation" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_CHO = "CHO" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_EVENT = "Event" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_LICENSE = "License" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_ORGANIZATION = "Organization" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_PLACE = "Place" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_TIMESPAN = "Timespan" + File.FILE_SEPARATOR;
 
     public static final String NS_REPO_RESOURCE_AGENT = NS_REPO_RESOURCE + LINK_ID_AGENT;
     public static final String NS_REPO_RESOURCE_AGGREGATION = NS_REPO_RESOURCE + LINK_ID_AGGREGATION;
@@ -58,8 +58,9 @@ public final class Namespace {
     public static final String NS_REPO_RESOURCE_TIMESPAN_UNKNOWN_MILLENNIUM = NS_REPO_RESOURCE_TIMESPAN_UNKNOWN
             + URL_SEPARATOR + Const.MILLENNIUM_PLACEHOLDER;
 
-    public static final String NS_DBPEDIA_RESOURCE = "http://dbpedia.org/page/";
-    public static final String NS_DBPEDIA_PROPERTY = "http://dbpedia.org/property/";
+    public static final String NS_DBPEDIA_ONTOLOGY = "https://dbpedia.org/ontology/";
+    public static final String NS_DBPEDIA_RESOURCE = "https://dbpedia.org/page/";
+    public static final String NS_DBPEDIA_PROPERTY = "https://dbpedia.org/property/";
 
     private Namespace() {}
 }

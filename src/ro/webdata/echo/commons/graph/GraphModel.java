@@ -18,12 +18,15 @@ public final class GraphModel {
 
     public static Model generateModel() {
         return ModelFactory.createDefaultModel()
-                .setNsPrefix("dbpedia", Namespace.NS_DBPEDIA_RESOURCE)
+                .setNsPrefix("dbo", Namespace.NS_DBPEDIA_ONTOLOGY)
+                .setNsPrefix("dbp", Namespace.NS_DBPEDIA_PROPERTY)
+                .setNsPrefix("dbr", Namespace.NS_DBPEDIA_RESOURCE)
                 .setNsPrefix("dc", DC_11.getURI())
                 .setNsPrefix("dcterms", DCTerms.getURI())
                 .setNsPrefix("edm", EDM.getURI())
                 .setNsPrefix("foaf", FOAF.getURI())
-                .setNsPrefix("openData", Namespace.NS_REPO_PROPERTY)
+                .setNsPrefix("odp", Namespace.NS_REPO_PROPERTY)
+                .setNsPrefix("odr", Namespace.NS_REPO_RESOURCE)
                 .setNsPrefix("ore", ORE.getURI())
                 .setNsPrefix("skos", SKOS.getURI());
     }

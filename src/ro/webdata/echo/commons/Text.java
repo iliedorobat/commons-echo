@@ -5,8 +5,12 @@ import org.apache.commons.text.CaseUtils;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public final class Text {
+    public static final String REGEX_TEXT_SEPARATORS = "[;,]";
     private static final boolean CAPITALIZE_FIRST_LETTER = false;
 
     private Text() {}
@@ -40,12 +44,36 @@ public final class Text {
         return CaseUtils.toCamelCase(value, CAPITALIZE_FIRST_LETTER, Const.CHAR_DELIMITER);
     }
 
+    public static String toCamelCase(String value, boolean capitalizeFirstLetter, char[] delimiters) {
+        return CaseUtils.toCamelCase(value, capitalizeFirstLetter, delimiters);
+    }
+
+    /**
+     * Split the text and get a list of atomic values.
+     * @param text The original input
+     * @param regexSeparator Text separator
+     * @return List of atomic values
+     */
+    public static List<String> toList(String text, String regexSeparator) {
+        String separator = regexSeparator != null
+                ? regexSeparator
+                : REGEX_TEXT_SEPARATORS;
+
+        return Arrays.stream(text.split(separator))
+                .map(String::trim)
+                .collect(Collectors.toList());
+    }
+
     /**
      * Replace all non-alphanumeric characters with underscore ("_").
      * @param value The input value
      * @return The formatted value
      */
     public static String sanitizeString(String value) {
+        if (value == null) {
+            return null;
+        }
+
         String regex = "(?U)[^\\p{Alnum}]+";
         String replacement = Const.UNDERSCORE_PLACEHOLDER;
         return value.replaceAll(regex, replacement);
@@ -66,5 +94,18 @@ public final class Text {
             e.printStackTrace();
             return uri;
         }
+    }
+
+    /**
+     * Encode the space character
+     * @param uri The URI
+     * @return The encoded URI
+     */
+    public static String encodeSpace(String uri) {
+        if (uri == null) {
+            return null;
+        }
+
+        return uri.replaceAll(" ", "%20");
     }
 }
