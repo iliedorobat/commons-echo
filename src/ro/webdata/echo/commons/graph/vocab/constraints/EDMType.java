@@ -21,4 +21,13 @@ public final class EDMType {
         VALUES.add(VALUE_TEXT);
         VALUES.add(VALUE_VIDEO);
     }
+
+    /**
+     * Check if EDMType.VALUES contains the input value
+     * @param value Input string
+     * @return true/false
+     */
+    public static boolean contains(String value) {
+        return EDMType.VALUES.contains(value);
+    }
 }
