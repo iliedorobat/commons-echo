@@ -24,6 +24,21 @@ public final class File {
     private File() {}
 
     /**
+     * Check if a file already exists
+     * @param filePath The full path of the file which is subject to verification
+     * @return True/False
+     */
+    public static boolean exists(String filePath) {
+        if (filePath == null) {
+            return false;
+        }
+
+        java.io.File file = new java.io.File(filePath);
+
+        return file.exists() && !file.isDirectory();
+    }
+
+    /**
      * Write data to disk
      * @param sw The writer input
      * @param filePath The full path where the file will be written
