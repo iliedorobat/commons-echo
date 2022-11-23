@@ -33,17 +33,17 @@ public final class Namespace {
     private static final String NS_LIDO = "http://www.lido-schema.org/schema/v1.0/lido-v1.0-schema-listing.html#";
     private static final String NS_REPO = "http://opendata.cs.pub.ro/";
 
-    public static final String NS_REPO_PROPERTY = NS_REPO + "property" + File.FILE_SEPARATOR;
-    public static final String NS_REPO_RESOURCE = NS_REPO + "resource" + File.FILE_SEPARATOR;
+    public static final String NS_REPO_PROPERTY = NS_REPO + "property" + URL_SEPARATOR;
+    public static final String NS_REPO_RESOURCE = NS_REPO + "resource" + URL_SEPARATOR;
 
-    public static final String LINK_ID_AGENT = "Agent" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_AGGREGATION = "Aggregation" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_CHO = "CHO" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_EVENT = "Event" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_LICENSE = "License" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_ORGANIZATION = "Organization" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_PLACE = "Place" + File.FILE_SEPARATOR;
-    public static final String LINK_ID_TIMESPAN = "Timespan" + File.FILE_SEPARATOR;
+    public static final String LINK_ID_AGENT = "Agent" + URL_SEPARATOR;
+    public static final String LINK_ID_AGGREGATION = "Aggregation" + URL_SEPARATOR;
+    public static final String LINK_ID_CHO = "CHO" + URL_SEPARATOR;
+    public static final String LINK_ID_EVENT = "Event" + URL_SEPARATOR;
+    public static final String LINK_ID_LICENSE = "License" + URL_SEPARATOR;
+    public static final String LINK_ID_ORGANIZATION = "Organization" + URL_SEPARATOR;
+    public static final String LINK_ID_PLACE = "Place" + URL_SEPARATOR;
+    public static final String LINK_ID_TIMESPAN = "Timespan" + URL_SEPARATOR;
 
     public static final String NS_REPO_RESOURCE_AGENT = NS_REPO_RESOURCE + LINK_ID_AGENT;
     public static final String NS_REPO_RESOURCE_AGGREGATION = NS_REPO_RESOURCE + LINK_ID_AGGREGATION;
@@ -52,7 +52,7 @@ public final class Namespace {
     public static final String NS_REPO_RESOURCE_ORGANIZATION = NS_REPO_RESOURCE + LINK_ID_ORGANIZATION;
     public static final String NS_REPO_RESOURCE_PLACE = NS_REPO_RESOURCE + LINK_ID_PLACE;
     public static final String NS_REPO_RESOURCE_TIMESPAN = NS_REPO_RESOURCE + LINK_ID_TIMESPAN;
-    public static final String NS_REPO_RESOURCE_TIMESPAN_UNKNOWN = NS_REPO_RESOURCE_TIMESPAN + "unknown" + File.FILE_SEPARATOR;
+    public static final String NS_REPO_RESOURCE_TIMESPAN_UNKNOWN = NS_REPO_RESOURCE_TIMESPAN + "unknown";
     public static final String NS_REPO_RESOURCE_TIMESPAN_UNKNOWN_CENTURY = NS_REPO_RESOURCE_TIMESPAN_UNKNOWN
             + URL_SEPARATOR + Const.CENTURY_PLACEHOLDER;
     public static final String NS_REPO_RESOURCE_TIMESPAN_UNKNOWN_MILLENNIUM = NS_REPO_RESOURCE_TIMESPAN_UNKNOWN

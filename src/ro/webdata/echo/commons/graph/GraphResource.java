@@ -26,7 +26,7 @@ public final class GraphResource {
      */
     public static String generateURI(String namespace, Resource resource, String resourceName) {
         return namespace
-                + resource.getLocalName() + File.FILE_SEPARATOR
+                + resource.getLocalName() + Namespace.URL_SEPARATOR
                 + Text.sanitizeString(resourceName);
     }
 
