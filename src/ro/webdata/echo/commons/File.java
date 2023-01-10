@@ -25,6 +25,21 @@ public final class File {
     private File() {}
 
     /**
+     * Create directory if it does not exist
+     * @param filePath The full path where the file will be written
+     */
+    public static void createDirectory(String filePath) {
+        if (filePath != null) {
+            String directoryName = filePath.substring(0, filePath.lastIndexOf(FILE_SEPARATOR));
+            java.io.File directory = new java.io.File(directoryName);
+
+            if (!directory.exists()) {
+                directory.mkdir();
+            }
+        }
+    }
+
+    /**
      * Check if a file already exists
      * @param filePath The full path of the file which is subject to verification
      * @return True/False
@@ -46,6 +61,7 @@ public final class File {
      * @param append Specify if the text should be appended to the existing one
      */
     public static void write(StringWriter sw, String filePath, boolean append) {
+        createDirectory(filePath);
         FileWriter fw = null;
 
         try {
