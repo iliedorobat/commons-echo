@@ -2,6 +2,7 @@ package ro.webdata.echo.commons;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public final class File {
     public static final String EXTENSION_ASP = "asp";
@@ -125,5 +126,48 @@ public final class File {
         }
 
         return sb;
+    }
+
+    public static ArrayList<String> getFileNames(String directoryPath, String extension, boolean excludeDemo) {
+        ArrayList<String> fileNames = new ArrayList<>();
+        ArrayList<String> allFileNames = getFileNames(directoryPath, extension);
+
+        for (String fullName : allFileNames) {
+            int dotIndex = fullName.lastIndexOf(".");
+            String fileName = fullName.substring(0, dotIndex);
+            boolean isDemoFile = fileName.startsWith("demo");
+
+            if ((excludeDemo && !isDemoFile) || !excludeDemo && isDemoFile) {
+                fileNames.add(fileName + EXTENSION_SEPARATOR + extension);
+            }
+        }
+
+        return fileNames;
+    }
+
+    public static ArrayList<String> getFileNames(String directoryPath, String extension) {
+        ArrayList<String> fileNames = new ArrayList<>();
+        java.io.File directory = new java.io.File(directoryPath);
+        java.io.File[] subDirectories = directory.listFiles();
+
+        if (subDirectories != null) {
+            for (java.io.File file : subDirectories) {
+                String fileName = file.getName();
+                String fileExtension = getFileExtension(fileName);
+
+                if (extension == null || extension.equals(fileExtension)) {
+                    fileNames.add(fileName);
+                }
+            }
+        } else {
+            System.err.println(directoryPath + " does not contain any directories!");
+        }
+
+        Collections.sort(fileNames);
+        return fileNames;
+    }
+
+    public static String getFileExtension(String fileName) {
+        return fileName.substring(fileName.lastIndexOf(EXTENSION_SEPARATOR) + 1).toLowerCase();
     }
 }
