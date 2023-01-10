@@ -39,6 +39,26 @@ public final class File {
         }
     }
 
+    public static ArrayList<String> getSubDirectoryNames(String directoryPath) {
+        ArrayList<String> directoryNames = new ArrayList<>();
+        java.io.File directory = new java.io.File(directoryPath);
+        java.io.File[] subDirectories = directory.listFiles();
+
+        if (subDirectories != null) {
+            for (java.io.File file : subDirectories) {
+                if (file.isDirectory()) {
+                    String fileName = file.getName();
+                    directoryNames.add(fileName);
+                }
+            }
+        } else {
+            System.err.println(directoryPath + " does not contain any directories!");
+        }
+
+        Collections.sort(directoryNames);
+        return directoryNames;
+    }
+
     /**
      * Check if a file already exists
      * @param filePath The full path of the file which is subject to verification
