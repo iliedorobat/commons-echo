@@ -1,5 +1,6 @@
 package ro.webdata.echo.commons;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.CaseUtils;
 
 import java.io.UnsupportedEncodingException;
@@ -67,16 +68,23 @@ public final class Text {
     /**
      * Replace all non-alphanumeric characters with underscore ("_").
      * @param value The input value
+     * @param stripAccents Flag indicating if accents should be removed
      * @return The formatted value
      */
-    public static String sanitizeString(String value) {
+    public static String sanitizeString(String value, boolean stripAccents) {
         if (value == null) {
             return null;
         }
 
         String regex = "(?U)[^\\p{Alnum}]+";
         String replacement = Const.UNDERSCORE_PLACEHOLDER;
-        return value.replaceAll(regex, replacement);
+        String preparedValue = value.replaceAll(regex, replacement);
+
+        if (stripAccents) {
+            return StringUtils.stripAccents(preparedValue);
+        }
+
+        return preparedValue;
     }
 
     /**

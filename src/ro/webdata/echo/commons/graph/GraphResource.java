@@ -11,10 +11,11 @@ public final class GraphResource {
      * Generate an URI based on the namespace
      * @param namespace The namespace (see NSConstants)
      * @param resourceName The name of the resource (a country, a name, a concept etc.)
+     * @param stripAccents Flag indicating if accents should be removed
      * @return The generated URI
      */
-    public static String generateURI(String namespace, String resourceName) {
-        return namespace + Text.sanitizeString(resourceName);
+    public static String generateURI(String namespace, String resourceName, boolean stripAccents) {
+        return namespace + Text.sanitizeString(resourceName, stripAccents);
     }
 
     /**
@@ -22,12 +23,13 @@ public final class GraphResource {
      * @param namespace The namespace (E.g.: NSConstants.SIMPLE_NS_REPO_RESOURCE)
      * @param resource The resource (E.g.: EDM.Agent)
      * @param resourceName The name of the resource (E.g.: Ilie, Romania, etc.)
+     * @param stripAccents Flag indicating if accents should be removed
      * @return The generated URI
      */
-    public static String generateURI(String namespace, Resource resource, String resourceName) {
+    public static String generateURI(String namespace, Resource resource, String resourceName, boolean stripAccents) {
         return namespace
                 + resource.getLocalName() + Namespace.URL_SEPARATOR
-                + Text.sanitizeString(resourceName);
+                + Text.sanitizeString(resourceName, stripAccents);
     }
 
     /**
