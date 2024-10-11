@@ -1,3 +1,0 @@
-Manifest-Version: 1.6.3
-Main-Class: ro.webdata.echo.Main
-
