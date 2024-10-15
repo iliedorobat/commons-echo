@@ -15,7 +15,7 @@ public class UrlValidator {
         }
 
         // Skip checking the list of URLs
-        // E.g.: "http://ghidulmuzeelor.cimec.ro/id.asp?k=2083&-Muzeul-Popa-Popa`s-TIMISOARA-Timis"
+        // E.g.: "https://ghidulmuzeelor.cimec.ro/id.asp?k=2083&-Muzeul-Popa-Popa`s-TIMISOARA-Timis"
         //      - "`" is not a valid URL character but the link works
         if (exceptedUrls != null && exceptedUrls.contains(url)) {
             return true;
