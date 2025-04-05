@@ -12,7 +12,7 @@ public final class Graph {
     /**
      * Get the attributes from a <b>Node</b> element and add them into a <b>HashMap</b>.
      * @param node <b>Node</b> type element.
-     * @return <b>HashMap</b>
+     * @return <b>Map</b>
      */
     public static Map<String, String> getAttributes(Node node) {
         NamedNodeMap attributes = node.getAttributes();
