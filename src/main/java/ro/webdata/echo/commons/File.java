@@ -3,6 +3,7 @@ package ro.webdata.echo.commons;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public final class File {
     public static final String EXTENSION_ASP = "asp";
@@ -39,8 +40,8 @@ public final class File {
         }
     }
 
-    public static ArrayList<String> getSubDirectoryNames(String directoryPath) {
-        ArrayList<String> directoryNames = new ArrayList<>();
+    public static List<String> getSubDirectoryNames(String directoryPath) {
+        List<String> directoryNames = new ArrayList<>();
         java.io.File directory = new java.io.File(directoryPath);
         java.io.File[] subDirectories = directory.listFiles();
 
@@ -119,7 +120,7 @@ public final class File {
      * @param filePath The full path where the file will be written
      * @param append Specify if the text should be appended to the existing one
      */
-    public static void write(ArrayList<String> list, String filePath, boolean append) {
+    public static void write(List<String> list, String filePath, boolean append) {
         StringWriter writer = new StringWriter();
 
         for (String string : list) {
@@ -164,9 +165,9 @@ public final class File {
         return sb;
     }
 
-    public static ArrayList<String> getFileNames(String directoryPath, String extension, boolean excludeDemo) {
-        ArrayList<String> fileNames = new ArrayList<>();
-        ArrayList<String> allFileNames = getFileNames(directoryPath, extension);
+    public static List<String> getFileNames(String directoryPath, String extension, boolean excludeDemo) {
+        List<String> fileNames = new ArrayList<>();
+        List<String> allFileNames = getFileNames(directoryPath, extension);
 
         for (String fullName : allFileNames) {
             int dotIndex = fullName.lastIndexOf(".");
@@ -181,8 +182,8 @@ public final class File {
         return fileNames;
     }
 
-    public static ArrayList<String> getFileNames(String directoryPath, String extension) {
-        ArrayList<String> fileNames = new ArrayList<>();
+    public static List<String> getFileNames(String directoryPath, String extension) {
+        List<String> fileNames = new ArrayList<>();
         java.io.File directory = new java.io.File(directoryPath);
         java.io.File[] subDirectories = directory.listFiles();
 

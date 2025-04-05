@@ -4,6 +4,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public final class Graph {
     private Graph() {}
@@ -11,11 +12,11 @@ public final class Graph {
     /**
      * Get the attributes from a <b>Node</b> element and add them into a <b>HashMap</b>.
      * @param node <b>Node</b> type element.
-     * @return <b>HashMap</b>
+     * @return <b>Map</b>
      */
-    public static HashMap<String, String> getAttributes(Node node) {
+    public static Map<String, String> getAttributes(Node node) {
         NamedNodeMap attributes = node.getAttributes();
-        HashMap<String, String> hashMapAttr = new HashMap<>();
+        Map<String, String> hashMapAttr = new HashMap<>();
 
         if (attributes != null) {
             for (int i = 0; i < attributes.getLength(); i++) {

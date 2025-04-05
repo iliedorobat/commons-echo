@@ -1,7 +1,6 @@
 package ro.webdata.echo.commons.graph;
 
 import org.apache.jena.rdf.model.Resource;
-import ro.webdata.echo.commons.File;
 import ro.webdata.echo.commons.Text;
 
 public final class GraphResource {
