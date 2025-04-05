@@ -2,14 +2,16 @@ package ro.webdata.echo.commons.graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public final class Timespan {
     private Timespan() {}
 
-    public static ArrayList<HashMap<String, String>> TIMESPAN = new ArrayList<>();
+    public static List<HashMap<String, String>> TIMESPAN = new ArrayList<>();
 
-    private static HashMap getTimespan(String language, String value) {
-        HashMap<String, String> hashMap = new HashMap<>();
+    private static Map<String, String> getTimespan(String language, String value) {
+        Map<String, String> hashMap = new HashMap<>();
 
         hashMap.put("lang", language);
         hashMap.put("value", value);

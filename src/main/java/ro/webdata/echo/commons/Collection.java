@@ -2,14 +2,14 @@ package ro.webdata.echo.commons;
 
 import ro.webdata.echo.commons.graph.Namespace;
 
-import java.util.TreeSet;
+import java.util.Set;
 
 public final class Collection {
     public static final String STRING_LIST_SEPARATOR = " ### ";
 
     private Collection() {}
 
-    public static String treeSetToDbpediaString(TreeSet<String> treeSet) {
+    public static String treeSetToDbpediaString(Set<String> treeSet) {
         StringBuilder sb = new StringBuilder();
         Object[] list = treeSet.toArray();
 
