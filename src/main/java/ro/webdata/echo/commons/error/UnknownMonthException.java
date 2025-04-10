@@ -5,8 +5,7 @@ public class UnknownMonthException extends RuntimeException {
     private final int monthNumber;
 
     public static String getMessage(int monthNumber, String monthName) {
-        return "Invalid month number: " + monthNumber
-                + " (month name: \"" + monthName + "\")!";
+        return "Invalid month number (" + monthNumber + ") of \"" + monthName + "\"!";
     }
 
     public static void printMessage(int monthNumber, String monthName) {

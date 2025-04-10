@@ -7,8 +7,8 @@ public class TooBigMillenniumException extends RuntimeException {
     private final int millennium;
 
     public static String getMessage(String operation, String position, int millennium) {
-        return operation + ": " + "The " + position + " millennium " + millennium
-                + " is higher than the last millennium the data has been updated ("
+        return operation + ": " + "The " + position + " millennium (" + millennium
+                + ") is higher than the last millennium the data has been updated ("
                 + Date.LAST_UPDATE_MILLENNIUM + ")!";
     }
 
