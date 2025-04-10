@@ -1,5 +1,7 @@
 package ro.webdata.echo.commons;
 
+import ro.webdata.echo.commons.error.UnknownMonthException;
+
 import java.text.DateFormatSymbols;
 import java.util.Locale;
 
@@ -59,7 +61,7 @@ public final class Date {
             // Exception treated for the case of "1877 en 20" (using TimespanRegex.DATE_TEXT)
             month = dateFormatSymbols.getMonths()[monthNumber - 1];
         } catch (Exception ignored) {
-            Print.unknownMonth(monthNumber, monthName);
+            UnknownMonthException.printMessage(monthNumber, monthName);
         }
 
         return month;
