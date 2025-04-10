@@ -12,7 +12,7 @@ public class TooBigYearException extends RuntimeException {
                 + Date.LAST_UPDATE_YEAR + ")!";
     }
 
-    public static void print(String operation, String position, int year) {
+    public static void printMessage(String operation, String position, int year) {
         System.err.println(getMessage(operation, position, year));
     }
 
