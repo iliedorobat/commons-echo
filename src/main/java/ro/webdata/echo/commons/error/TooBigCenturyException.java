@@ -7,8 +7,8 @@ public class TooBigCenturyException extends RuntimeException {
     private final int century;
 
     public static String getMessage(String operation, String position, int century) {
-        return operation + ": " + "The " + position + " century " + century
-                + " is higher than the last century the data has been updated ("
+        return operation + ": " + "The " + position + " century (" + century
+                + ") is higher than the last century the data has been updated ("
                 + Date.LAST_UPDATE_CENTURY + ")!";
     }
 
