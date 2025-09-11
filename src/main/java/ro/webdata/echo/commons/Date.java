@@ -24,7 +24,7 @@ public final class Date {
     }
 
     /**
-     * Map a month expressed as a number or as a non-English month name
+     * Map a month expressed as a number or as a month name
      * to the corresponding English month name<br/>
      *      E.g.: "1" => "January"<br/>
      *      E.g.: "01" => "January"<br/>
@@ -68,11 +68,10 @@ public final class Date {
     }
 
     /**
-     * Map a non-English month name to the corresponding number<br/>
+     * Map a month name to the corresponding number<br/>
      * E.g.: "ianuarie" => 1
      * @param month The month name
      * @return The month number
-     * FIXME: add more values as you need
      */
     private static int mapMonthToNumber(String month) {
         String value = month
@@ -80,49 +79,35 @@ public final class Date {
                 .toLowerCase()
                 .trim();
 
-        switch (value) {
-            case "ianuarie":
-            case "ian":
-                return 1;
-            case "februarie":
-            case "fevruarie":
-            case "feb":
-                return 2;
-            case "martie":
-            case "mart":
-                return 3;
-            case "aprilie":
-            case "apr":
-                return 4;
-            case "mai":
-                return 5;
-            case "iunie":
-            case "iumie":
-            case "iun":
-                return 6;
-            case "iulie":
-            case "iul":
-                return 7;
-            case "august":
-            case "aug":
-                return 8;
-            case "septembrie":
-            case "sept":
-                return 9;
-            case "octombrie":
-            case "0ctombrie":
-            case "oct":
-                return 10;
-            case "noiembrie":
-            case "noimbrie":
-            case "nov":
-                return 11;
-            case "decembrie":
-            case "decembre":
-            case "dec":
-                return 12;
-            default:
-                return -1;
+        if (value.startsWith("jan") || value.startsWith("ian")) {
+            return 1;
+        } else if (value.startsWith("feb") || value.equals("fevruarie")) {
+            // E.g.: feb, febr, february, februarie, fevruarie
+            return 2;
+        } else if (value.startsWith("mar")) {
+            return 3;
+        } else if (value.startsWith("apr")) {
+            // E.g.: apr, aprl, april, aprilie
+            return 4;
+        } else if (value.equals("may") || value.equals("mai")) {
+            return 5;
+        } else if (value.startsWith("jun") || value.startsWith("iun") || value.equals("iumie")) {
+            return 6;
+        } else if (value.startsWith("iul") || value.startsWith("jul")) {
+            return 7;
+        } else if (value.startsWith("aug")) {
+            return 8;
+        } else if (value.startsWith("sep")) {
+            return 9;
+        } else if (value.startsWith("oct") || value.startsWith("0ct")) {
+            // E.g.: octombrie, 0ctombrie
+            return 10;
+        } else if (value.startsWith("noi") || value.startsWith("nov")) {
+            return 11;
+        } else if (value.startsWith("dec")) {
+            return 12;
         }
+
+        return -1;
     }
 }
