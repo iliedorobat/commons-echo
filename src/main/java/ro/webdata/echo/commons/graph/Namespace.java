@@ -59,7 +59,7 @@ public final class Namespace {
             + URL_SEPARATOR + Const.MILLENNIUM_PLACEHOLDER;
 
     public static final String NS_DBPEDIA_ONTOLOGY = "https://dbpedia.org/ontology/";
-    public static final String NS_DBPEDIA_RESOURCE = "https://dbpedia.org/page/";
+    public static final String NS_DBPEDIA_RESOURCE = "https://dbpedia.org/resource/";
     public static final String NS_DBPEDIA_PROPERTY = "https://dbpedia.org/property/";
 
     private Namespace() {}
