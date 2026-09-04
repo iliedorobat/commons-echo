@@ -23,11 +23,11 @@ public final class Collection {
                 //TODO: check for possible bugs
                 /*
                 // OLD:
-                sb.append("http://dbpedia.org/page/");
+                sb.append("http://dbpedia.org/resource/");
                 sb.append(item);
 
                 // NEW:
-                sb.append("http://dbpedia.org/page");
+                sb.append("http://dbpedia.org/resource");
                 sb.append("/");
                 sb.append(item);
                  */
